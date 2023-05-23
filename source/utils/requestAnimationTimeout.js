@@ -7,7 +7,7 @@ export type AnimationTimeoutId = {
 };
 
 export const cancelAnimationTimeout = (frame: AnimationTimeoutId) =>
-  caf(frame.id);
+  caf.call(window, frame.id);
 
 /**
  * Recursively calls requestAnimationFrame until a specified delay has been met or exceeded.
@@ -29,12 +29,12 @@ export const requestAnimationTimeout = (
     if (Date.now() - start >= delay) {
       callback.call();
     } else {
-      frame.id = raf(timeout);
+      frame.id = raf.call(window, timeout);
     }
   };
 
   const frame: AnimationTimeoutId = {
-    id: raf(timeout),
+    id: raf.call(window, timeout),
   };
 
   return frame;
