@@ -1,13 +1,16 @@
 {
-  "name": "react-virtualized",
-  "description": "React components for efficiently rendering large, scrollable lists and tabular data",
+  "name": "@ricardosc/react-virtualized",
+  "description": "React components for efficiently rendering large, scrollable lists and tabular data - FIX Illegal invocation",
   "author": "Brian Vaughn <brian.david.vaughn@gmail.com>",
   "user": "bvaughn",
-  "version": "9.22.4",
+  "version": "9.22.52",
   "homepage": "https://github.com/bvaughn/react-virtualized",
   "main": "dist/commonjs/index.js",
   "module": "dist/es/index.js",
   "jsnext:main": "dist/es/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
   "license": "MIT",
   "scripts": {
     "build:types": "flow-copy-source --ignore \"**/*.{jest,e2e,ssr,example}.js\" source/WindowScroller dist/es/WindowScroller && flow-copy-source --ignore \"**/*.{jest,e2e,ssr,example}.js\" source/AutoSizer dist/es/AutoSizer",
@@ -74,9 +77,9 @@
     "@babel/core": "^7.7.2",
     "@babel/plugin-external-helpers": "^7.2.0",
     "@babel/plugin-proposal-class-properties": "^7.7.0",
+    "@babel/plugin-transform-flow-comments": "^7.12.13",
     "@babel/plugin-transform-modules-commonjs": "^7.7.0",
     "@babel/plugin-transform-runtime": "^7.6.2",
-    "@babel/plugin-transform-flow-comments": "^7.12.13",
     "@babel/polyfill": "^7.7.0",
     "@babel/preset-env": "^7.7.1",
     "@babel/preset-flow": "^7.0.0",
